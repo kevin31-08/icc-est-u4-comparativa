@@ -13,5 +13,10 @@ public class Resultado {
         this.tiempoNano = tiempoNano;
         this.tiempoMillis = tiempoNano/1_000_000.0;
     }
+    @Override
+    public String toString() {
+        return String.format(
+            "%-30s | %-10s | %-7d | %.2f ms",escenario,algoritmo,sample,tiempoMillis);
+    }
     
 }
