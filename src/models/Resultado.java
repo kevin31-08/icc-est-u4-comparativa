@@ -15,8 +15,10 @@ public class Resultado {
     }
     @Override
     public String toString() {
-        return String.format(
-            "%-30s | %-10s | %-7d | %.2f ms",escenario,algoritmo,sample,tiempoMillis);
-    }
+        return escenario + " | " +
+           algoritmo + " | " +
+           sample + " | " +
+           tiempoMillis + " ms";
+}
     
 }

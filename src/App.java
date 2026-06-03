@@ -9,20 +9,20 @@ public class App {
     public static void main(String[] args) throws Exception {
         SortPersonaMethods controller = new SortPersonaMethods();
         Persona[] personas = generarPersonas(10000);
-        Persona[] personasInsercion = personas.clone();
+        Persona[] personas0 = personas.clone();
         Persona[] personasQuick = personas.clone();
 
          Resultado tiempo1 = Bencharking.medirTiempo(
             new Callable<Void>() {
                 @Override
                 public Void call() {
-                    controller.insertionSort(personasInsercion);
+                    controller.insertionSort(personas0);
                     return null;
                 }
             },
             "Insercion",
             "Desordenado",
-            personasInsercion.length
+            personas0.length
         );
         Resultado tiempo2 = Bencharking.medirTiempo(
             new Callable<Void>() {
