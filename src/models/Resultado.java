@@ -15,10 +15,7 @@ public class Resultado {
     }
     @Override
     public String toString() {
-        return escenario + " | " +
-           algoritmo + " | " +
-           sample + " | " +
-           tiempoMillis + " ms";
+        return escenario + " | " + algoritmo + " | " + sample + " | " + tiempoMillis + " ms";
 }
     
 }
